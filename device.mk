@@ -7,6 +7,9 @@
 # Shipping API
 PRODUCT_SHIPPING_API_LEVEL := 29
 
+# Call the ViperFX Config
+$(call inherit-product-if-exists, packages/apps/ViPER4AndroidFX/config.mk)
+
 # Setup dalvik vm configs
 $(call inherit-product, frameworks/native/build/phone-xhdpi-6144-dalvik-heap.mk)
 
