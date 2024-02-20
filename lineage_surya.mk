@@ -12,12 +12,21 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/surya/device.mk)
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/rising/config/rising.mk)
 
-PRODUCT_NAME := lineage_surya
+# Rising flags
+RISING_MAINTAINER := Skyy | 私は空です
+WITH_GMS := false
+TARGET_CORE_GMS := true
+RISING_CHIPSET := Snapdragon 732G
+SUSHI_BOOTANIMATION := 1080
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+# Build flags
+PRODUCT_NAME := rising_surya
 PRODUCT_DEVICE := surya
 PRODUCT_BRAND := POCO
 PRODUCT_MODEL := M2007J20CG
 PRODUCT_MANUFACTURER := Xiaomi
-
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
+TARGET_VENDOR_PRODUCT_NAME := surya
